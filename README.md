@@ -36,20 +36,20 @@ JAVA
 
 ```
 ScratchView scratchView = new ScratchView(this);
-        scratchView.setMaxPercent(0.8f); // 0f ～ 1f
-        scratchView.setEraseSize(60f);
-        scratchView.setSurfaceImageSrcId(R.mipmap.scratch_bg);
-        scratchView.setSurfaceDrawMode(ScratchView.Mode.WATERMARK);// ScratchView.Mode.NORMAL | ScratchView.Mode.WATERMARK
-        scratchView.setSurfaceColor(Color.RED);
-        scratchView.setOnEraseStatusListener(new ScratchView.OnEraseStatusListener() {
-            @Override
-            public void onProgress(float percent) {
-                
-            }
+scratchView.setMaxPercent(0.8f); // 0f ～ 1f
+scratchView.setEraseSize(60f);
+scratchView.setSurfaceImageSrcId(R.mipmap.scratch_bg);
+scratchView.setSurfaceDrawMode(ScratchView.Mode.WATERMARK);// ScratchView.Mode.NORMAL | ScratchView.Mode.WATERMARK
+scratchView.setSurfaceColor(Color.RED);
+scratchView.setOnEraseStatusListener(new ScratchView.OnEraseStatusListener() {
+    @Override
+    public void onProgress(float percent) {
+        
+    }
 
-            @Override
-            public void onCompleted(View view) {
+    @Override
+    public void onCompleted(View view) {
 
-            }
-        });
+    }
+});
 ```
