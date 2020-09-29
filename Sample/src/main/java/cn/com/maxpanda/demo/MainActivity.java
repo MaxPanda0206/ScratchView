@@ -3,6 +3,7 @@ package cn.com.maxpanda.demo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +35,25 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         mBinding.percent.setText(String.format("0/%s", mBinding.scratchView.getMaxPercent()));
         int max = (int) (mBinding.scratchView.getMaxPercent() * 100);
         mBinding.maxPercent.setProgress(max);
+
+
+        ScratchView scratchView = new ScratchView(this);
+        scratchView.setMaxPercent(0.8f); // 0f ～ 1f
+        scratchView.setEraseSize(60f);
+        scratchView.setSurfaceImageSrcId(R.mipmap.scratch_bg);
+        scratchView.setSurfaceDrawMode(ScratchView.Mode.WATERMARK);// ScratchView.Mode.NORMAL | ScratchView.Mode.WATERMARK
+        scratchView.setSurfaceColor(Color.RED);
+        scratchView.setOnEraseStatusListener(new ScratchView.OnEraseStatusListener() {
+            @Override
+            public void onProgress(float percent) {
+
+            }
+
+            @Override
+            public void onCompleted(View view) {
+
+            }
+        });
 
     }
 
