@@ -19,7 +19,8 @@ dependencies {
     implementation 'com.github.MaxPanda0206:ScratchView:1.0.1'
 }
 ```
-Step 3. XML
+Step 3. 
+XML
 ```
 <cn.com.maxpanda.view.ScratchView
     android:id="@+id/scratch_view"
@@ -28,7 +29,7 @@ Step 3. XML
     app:layout_constraintDimensionRatio="H,2:1"
     app:layout_constraintTop_toTopOf="parent"/>
 ```
-Step 3. JAVA
+JAVA
 ```
 ScratchView scratchView = new ScratchView(this);
         scratchView.setMaxPercent(0.8f); // 0f ～ 1f
