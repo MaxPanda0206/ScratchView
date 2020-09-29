@@ -1,0 +1,3 @@
+include ':lib-ScratchView'
+include ':Sample'
+rootProject.name = "ScratchView"

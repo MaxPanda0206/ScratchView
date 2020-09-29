@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="谢谢惠顾"
+            android:textColor="@color/colorAccent"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:shadowColor="#800000"
+            android:shadowDx="0"
+            android:shadowDy="8"
+            android:shadowRadius="1"
+            app:layout_constraintDimensionRatio="H,2:1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <cn.com.maxpanda.view.ScratchView
+            android:id="@+id/scratch_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="H,2:1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="visible">
+
+        </cn.com.maxpanda.view.ScratchView>
+
+        <TextView
+            android:id="@+id/scratch_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:text="Scratch Percent : "
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/percent"
+            app:layout_constraintTop_toBottomOf="@+id/scratch_view"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/percent"
+            android:layout_width="0dp"
+            android:layout_height="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/scratch_percent"
+            app:layout_constraintLeft_toRightOf="@+id/scratch_percent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/scratch_percent" />
+
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:text="Eraser Size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/percent"
+            app:layout_constraintTop_toBottomOf="@+id/scratch_percent"
+            tools:ignore="HardcodedText" />
+
+        <SeekBar
+            android:id="@+id/eraser_size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:maxHeight="20dp"
+            android:minHeight="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_size"
+            app:layout_constraintLeft_toLeftOf="@+id/percent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_size" />
+
+        <TextView
+            android:id="@+id/tv_max_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:text="Max Percent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/percent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_size"
+            tools:ignore="HardcodedText" />
+
+        <SeekBar
+            android:id="@+id/max_percent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:maxHeight="20dp"
+            android:minHeight="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_max_percent"
+            app:layout_constraintLeft_toLeftOf="@+id/percent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_max_percent" />
+
+        <TextView
+            android:id="@+id/tv_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:text="Mode"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/mode"
+            app:layout_constraintTop_toBottomOf="@+id/tv_max_percent"
+            tools:ignore="HardcodedText" />
+
+        <RadioGroup
+            android:id="@+id/mode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="@+id/percent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_max_percent">
+
+            <RadioButton
+                android:id="@+id/rb_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="normal"
+                tools:ignore="HardcodedText"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rb_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="image"
+                tools:ignore="HardcodedText" />
+
+            <RadioButton
+                android:id="@+id/rb_watermark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="watermark"
+                tools:ignore="HardcodedText" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="reset"
+            android:text="RESET"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mode"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="clear"
+            android:text="CLEAR"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_reset"
+            tools:ignore="HardcodedText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

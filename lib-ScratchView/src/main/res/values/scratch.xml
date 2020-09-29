@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ScratchView">
+        <!--涂层的颜色-->
+        <attr name="surfaceColor" format="color|reference" />
+        <!--涂层图片资源ID-->
+        <attr name="surfaceImageSrc" format="reference" />
+        <!--擦除尺寸大小-->
+        <attr name="eraseSize" format="float" />
+        <!--最大擦除比例-->
+        <attr name="maxPercent" format="float" />
+        <!--涂层绘制模式-->
+        <attr name="surfaceDrawMode">
+            <enum name="normal" value="0" />
+            <enum name="image" value="1" />
+            <enum name="watermark" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>
