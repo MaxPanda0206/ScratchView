@@ -1,7 +1,7 @@
 # ScratchView
 刮刮卡效果的自定义View
 # 效果
-![image](https://github.com/MaxPanda0206/ScratchView/blob/1.0.1/screen-snap/scratch.gif)
+![image](https://github.com/MaxPanda0206/ScratchView/blob/1.0.1/screen-snap/scratch.gif){:height="215px" width="204px"}
 
 # 用法
 Step 1. Add the JitPack repository to your build file
