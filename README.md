@@ -5,6 +5,7 @@
 # 用法
 Step 1. Add the JitPack repository to your build file
 Add it in your root build.gradle at the end of repositories:
+
 ```
 allprojects {
     repositories {
@@ -14,13 +15,14 @@ allprojects {
 }
 ```
 Step 2. Add the dependency
+
 ```
 dependencies {
     implementation 'com.github.MaxPanda0206:ScratchView:1.0.1'
 }
 ```
-Step 3. 
-XML
+Step 3. XML
+
 ```
 <cn.com.maxpanda.view.ScratchView
     android:id="@+id/scratch_view"
@@ -30,6 +32,7 @@ XML
     app:layout_constraintTop_toTopOf="parent"/>
 ```
 JAVA
+
 ```
 ScratchView scratchView = new ScratchView(this);
         scratchView.setMaxPercent(0.8f); // 0f ～ 1f
