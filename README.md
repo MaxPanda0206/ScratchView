@@ -75,5 +75,5 @@ scratchView.setOnEraseStatusListener(new ScratchView.OnEraseStatusListener() {
 });
 ```
 ## 感谢 
-[D_clock爱吃葱花](https://github.com/D-clock/ScratchView/)
-[Harish Sridharan](https://github.com/sharish/ScratchView)
+[D_clock爱吃葱花： https://github.com/D-clock/ScratchView](https://github.com/D-clock/ScratchView/)  
+[Harish Sridharan： https://github.com/sharish/ScratchView](https://github.com/sharish/ScratchView)
