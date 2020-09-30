@@ -57,11 +57,17 @@ JAVA
 
 ```
 ScratchView scratchView = new ScratchView(this);
+//最大擦除系数 达到该系数会调用 OnEraseStatusListener 的 onCompleted() 方法
 scratchView.setMaxPercent(0.8f); // 0f ～ 1f
+//橡皮擦大小
 scratchView.setEraseSize(60f);
+//涂层图片资源 ID
 scratchView.setSurfaceImageSrcId(R.mipmap.scratch_bg);
+//涂层绘制模式
 scratchView.setSurfaceDrawMode(ScratchView.Mode.WATERMARK);// ScratchView.Mode.NORMAL | ScratchView.Mode.WATERMARK
+//涂层颜色
 scratchView.setSurfaceColor(Color.RED);
+//擦除状态监听器
 scratchView.setOnEraseStatusListener(new ScratchView.OnEraseStatusListener() {
     @Override
     public void onProgress(float percent) {
