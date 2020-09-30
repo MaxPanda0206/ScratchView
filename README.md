@@ -1,5 +1,5 @@
 # ScratchView
-刮刮卡效果的自定义View
+Android 自定义 View 实现刮刮卡效果
 ## 效果
 ![image](screen-snap/scratch.gif)
 
