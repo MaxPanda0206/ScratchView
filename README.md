@@ -20,14 +20,38 @@ dependencies {
     implementation 'com.github.MaxPanda0206:ScratchView:1.0.1'
 }
 ```
-Step 3. XML
+XML
 ```
-<cn.com.maxpanda.view.ScratchView
-    android:id="@+id/scratch_view"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    app:layout_constraintDimensionRatio="H,2:1"
-    app:layout_constraintTop_toTopOf="parent"/>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- 底部 -->
+        <TextView
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="谢谢惠顾"
+            android:textColor="@color/colorAccent"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintDimensionRatio="H,2:1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+        <!-- 表面 -->
+        <cn.com.maxpanda.view.ScratchView
+            android:id="@+id/scratch_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:surfaceDrawMode="normal"
+            app:surfaceColor="@color/colorPrimary"
+            app:surfaceImageSrc="@mipmap/scratch_bg"
+            app:eraseSize="60"
+            app:layout_constraintDimensionRatio="H,2:1"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </cn.com.maxpanda.view.ScratchView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 JAVA
 
